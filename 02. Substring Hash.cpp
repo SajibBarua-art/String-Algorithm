@@ -33,7 +33,7 @@ void init(string input_string) {
         p_power = (p_power * p)%mod;
         inv[i] = power(p_power, mod-2);
 
-        dp[i] = (dp[i-1] + input_string[i] - 'a' + 1)%mod;
+        dp[i] = (dp[i-1] + (input_string[i] - 'a' + 1)*p_power)%mod;
     }
 }
 
